@@ -63,4 +63,4 @@ jobs:
         images: |-
           'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}/wordpress:latest'
           'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}/mysql:5.7'
-        configuration-file: docker-compose-wordpress.yml
+        configuration-file: ./docker-compose-wordpress.yml
