@@ -26,12 +26,12 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}
         password: ${{ secrets.AzureAppService_ContainerPassword_006da05bbedf42a8b772fbf2b40a5b78 }}
 
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
-      with:
-        push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}/wordpress:latest
-        file: ./Dockerfile
+#     - name: Build and push container image to registry
+#       uses: docker/build-push-action@v3
+#       with:
+#         push: true
+#         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}/wordpress:latest
+#         file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,7 +55,7 @@ jobs:
         
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@sgTesting
       with:
         app-name: 'multiContainerTesting'
         slot-name: 'production'
