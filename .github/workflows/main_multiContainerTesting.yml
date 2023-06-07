@@ -53,4 +53,4 @@ jobs:
         app-name: 'multiContainerTesting'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_5cc4468d1fe747c5ab80db2a1f080faf }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}/nginx:latest'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}/wordpress:latest'
