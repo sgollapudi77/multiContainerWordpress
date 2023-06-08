@@ -53,6 +53,12 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_733f5f799c7440e8829b57d20f37639f }}
         password: ${{ secrets.AzureAppService_ContainerPassword_006da05bbedf42a8b772fbf2b40a5b78 }}
         
+    - name: Print working directory
+      run : echo $PWD
+      
+    - name: List all files
+      run : ls -R
+      
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
       uses: azure/webapps-deploy@sgTesting
